@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "ArXiv → Ar5iv HTML Redirect",
+  "version": "1.2.0",
+  "description": "Open arXiv items on ar5iv.org (HTML view); adds a toolbar button and rewrites links on-page.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://arxiv.org/*",
+    "*://www.arxiv.org/*",
+    "*://ar5iv.org/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "ruleset", "enabled": true, "path": "rules_1.json" }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open on ar5iv"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://arxiv.org/*", "*://www.arxiv.org/*", "*://ar5iv.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

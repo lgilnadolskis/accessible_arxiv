@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": {
+      "regexSubstitution": "https://ar5iv.org/html/\\1"
+    }},
+    "condition": {
+      "regexFilter": "^https?://(?:www\\.)?arxiv\\.org/abs/(.+)$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": {
+      "regexSubstitution": "https://ar5iv.org/html/\\1"
+    }},
+    "condition": {
+      "regexFilter": "^https?://(?:www\\.)?arxiv\\.org/pdf/([^/?#]+)(?:\\.pdf)?(?:[?#].*)?$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": {
+      "regexSubstitution": "https://ar5iv.org/html/\\1"
+    }},
+    "condition": {
+      "regexFilter": "^https?://(?:www\\.)?arxiv\\.org/format/([^/?#]+)(?:[?#].*)?$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": {
+      "regexSubstitution": "https://ar5iv.org/html/\\1"
+    }},
+    "condition": {
+      "regexFilter": "^https?://(?:www\\.)?arxiv\\.org/html/(.+)$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": {
+      "regexSubstitution": "https://ar5iv.org/html/\\1"
+    }},
+    "condition": {
+      "regexFilter": "^https?://ar5iv\\.org/abs/(.+)$",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
